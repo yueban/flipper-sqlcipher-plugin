@@ -29,8 +29,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':library')
-//    implementation 'com.github.yueban:FlipperSqlcipherPlugin:1.0.0'
+//    implementation project(':library')
+    implementation 'com.github.yueban:flipper-sqlcipher-plugin:1.0.0'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
