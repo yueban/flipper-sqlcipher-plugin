@@ -17,7 +17,7 @@ Add the dependency
 
 ```gradle
 dependencies {
-    implementation 'com.github.yueban:flipper-sqlcipher-plugin:1.0.0'
+    implementation 'com.github.yueban:flipper-sqlcipher-plugin:1.0.1'
 }
 ```
 
