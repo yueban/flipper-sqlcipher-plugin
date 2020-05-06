@@ -8,17 +8,15 @@ import java.util.*
  * @date 2020/5/2
  */
 object Util {
-    fun cursorToList(cursor: Cursor): List<List<Any>> {
-        val rows: MutableList<List<Any>> =
+    fun cursorToList(cursor: Cursor): List<List<Any?>> {
+        val rows: MutableList<List<Any?>> =
             ArrayList()
         val numColumns = cursor.columnCount
         while (cursor.moveToNext()) {
-            val values: MutableList<Any> =
+            val values: MutableList<Any?> =
                 ArrayList()
             for (column in 0 until numColumns) {
-                getObjectFromColumnIndex(cursor, column)?.let {
-                    values.add(it)
-                }
+                values.add(getObjectFromColumnIndex(cursor, column))
             }
             rows.add(values)
         }

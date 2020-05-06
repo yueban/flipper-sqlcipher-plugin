@@ -14,7 +14,7 @@ class DefaultExecuteResultHandler : ExecuteResultHandler<DatabaseExecuteSqlRespo
 
     override fun handleSelect(result: Cursor?): DatabaseExecuteSqlResponse {
         val columns = result!!.columnNames.asList()
-        val rows: List<List<Any>> = Util.cursorToList(result)
+        val rows: List<List<Any?>> = Util.cursorToList(result)
 
         return DatabaseExecuteSqlResponse.successfulSelect(columns, rows)
     }

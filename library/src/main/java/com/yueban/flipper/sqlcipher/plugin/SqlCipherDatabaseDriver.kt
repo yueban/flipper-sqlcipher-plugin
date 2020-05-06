@@ -199,7 +199,7 @@ class SqlCipherDatabaseDriver(
             val total = DatabaseUtils.queryNumEntries(database, table)
             database.query(table, null, null, null, null, null, orderBy, limitBy).use { cursor ->
                 val columnNames = cursor.columnNames
-                val rows: List<List<Any>> = Util.cursorToList(cursor)
+                val rows: List<List<Any?>> = Util.cursorToList(cursor)
                 DatabaseGetTableDataResponse(
                     listOf(*columnNames),
                     rows,
