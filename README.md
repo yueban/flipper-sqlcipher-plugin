@@ -1,9 +1,11 @@
 ## preview
+
 ![preview](preview.png)
 
 ## How to use
 
-Add the JitPack repository to your build file
+1. Add the JitPack repository to your build file
+
 ```gradle
 allprojects {
     repositories {
@@ -13,15 +15,16 @@ allprojects {
 }
 ```
 
-Add the dependency
+2. Add the dependency
 
 ```gradle
 dependencies {
-    implementation 'com.github.yueban:flipper-sqlcipher-plugin:1.0.1'
+    implementation 'com.github.yueban:flipper-sqlcipher-plugin:1.0.2'
 }
 ```
 
-Create a `SqlCipherDatabaseDriver` to init your `DatabasesFlipperPlugin`
+3. Create a `SqlCipherDatabaseDriver` to init your `DatabasesFlipperPlugin`
+
 ```kotlin
 val client = AndroidFlipperClient.getInstance(this)
 
@@ -44,3 +47,7 @@ client.start()
 ```
 
 check [sample](sample) for more details.
+
+## minSdkVersioin
+
+The minSdkVersion is 16, cause this library depends on `android-database-sqlcipher` library which minSdkVersion is 16.
