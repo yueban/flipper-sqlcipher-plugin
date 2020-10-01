@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/yueban/flipper-sqlcipher-plugin.svg)](https://jitpack.io/#yueban/flipper-sqlcipher-plugin)
+
 ## preview
 
 ![preview](preview.png)
